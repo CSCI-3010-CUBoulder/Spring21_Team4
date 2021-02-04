@@ -1,8 +1,8 @@
-/* String functions section */
-using namespace std;
-#include <vector>
 #include <string>
-#include <iostream>
+#include <vector>
+
+
+/* String functions section */
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -37,10 +37,22 @@ std::vector<bool> OddMask(std::vector<int>);
 int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums);
+int Product(std::vector<int> nums){
+    int output = 0;
+    for(int i = 0; i < nums.size(); i++){
+        output += nums[i] * output;
+    }
+
+    return output;
+} // Tristan
 
 // Adds an integer n to each element of a given vector
-std::vector<int> VectorPlusN(std::vector<int> v, int n);
+std::vector<int> VectorPlusN(std::vector<int> v, int n){
+    for(int i = 0; i < v.size(); i++){
+        v[i] += n;
+    }
+    return v;
+} // Tristan
 
 // Multiples an integer n with each element of a given vector
 std::vector<int> VectorTimesN(std::vector<int> v, int n);
@@ -59,7 +71,15 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
-int Sign(int num);
+int Sign(int num){
+    if(num > 0){
+        return 1;
+    }
+    else{
+        return -1;
+    }
+}
+
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
@@ -97,7 +117,14 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num);
+double Sign(double num){
+    if(num > 0.0){
+        return 1.0;
+    }
+    else{
+        return -1.0;
+    }
+}
 
 
 // adds n to each element of the vector
@@ -123,3 +150,8 @@ std::vector<int> SubtractN(std::vector<int> vect, int n){
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+int main(int argc, char* argv[]){
+
+    return 0;
+}
