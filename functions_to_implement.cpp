@@ -1,7 +1,10 @@
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -37,6 +40,7 @@ std::vector<bool> OddMask(std::vector<int>);
 int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
+<<<<<<< HEAD
 int Product(std::vector<int> nums){
     int output = 0;
     for(int i = 0; i < nums.size(); i++){
@@ -53,6 +57,12 @@ std::vector<int> VectorPlusN(std::vector<int> v, int n){
     }
     return v;
 } // Tristan
+=======
+int Product(std::vector<int> nums);
+
+// Adds an integer n to each element of a given vector
+std::vector<int> VectorPlusN(std::vector<int> v, int n);
+>>>>>>> main
 
 // Multiples an integer n with each element of a given vector
 std::vector<int> VectorTimesN(std::vector<int> v, int n);
@@ -71,7 +81,19 @@ int NthFibonacci(int n);
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
+<<<<<<< HEAD
 int Sign(int num);
+=======
+int Sign(int num){
+    if(num > 0){
+        return 1; 
+    }
+    else{
+        return -1; 
+    }
+}
+
+>>>>>>> main
 
 // takes two vectors of doubles, a and b. The function then removes elements from a if they are also in b.
 // If the double is in b, but not in a, nothing happens.
@@ -109,7 +131,18 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
+<<<<<<< HEAD
 double Sign(double num);
+=======
+double Sign(double num){
+    if(num > 0.0){
+        return 1.0;
+    }
+    else{
+        return -1.0;
+    }
+}
+>>>>>>> main
 
 
 // adds n to each element of the vector
@@ -119,17 +152,29 @@ std::vector<int> AddN(std::vector<int>, int n);
 std::vector<double> AddN(std::vector<double>, double n);
 
 // adds n to each element of the vector
+<<<<<<< HEAD
 std::vector<std::string> AddN(std::vector<std::string>, std::string n); // Haley Hartin
 
 
 // subtracts n to each element of the vector
 std::vector<int> SubtractN(std::vector<int>, int n);    // Haley Hartin
+=======
+std::vector<std::string> AddN(std::vector<std::string>, std::string n);
+
+
+// subtracts n to each element of the vector
+std::vector<int> SubtractN(std::vector<int>, int n);
+>>>>>>> main
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
 
 
+<<<<<<< HEAD
 int main(){
+=======
+int main(int argc, char* argv[]){
+>>>>>>> main
 
     return 0;
 }
