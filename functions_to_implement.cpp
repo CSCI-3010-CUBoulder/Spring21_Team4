@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <numeric>
+
+
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -30,7 +35,9 @@ std::vector<bool> EvenMask(std::vector<int>);
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums);
+int Sum(std::vector<int> nums) {
+    return accumulate(nums.begin(), nums.end(),0);
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums);
@@ -49,7 +56,28 @@ std::vector<int> Multiples(int n, int m);
 std::vector<int> SquaresUntil(int n);
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
-int NthFibonacci(int n);
+int NthFibonacci(int n) {
+    int n;
+    int val1 = 0;
+    int val2 = 1;
+    int nextTerm = 0;
+
+    for(int i = 1; i <= n; i++){
+        if(i == 1) {
+            cout << val1 << ", ";
+            continue;
+        }
+        if(i == 2) {
+            cout << val2 << ", ";
+        }
+        nextTerm = val1 + val2;
+        val1 = val2;
+        val2 = nextTerm;
+
+        cout << nextTerm << ", ";
+    }
+    return 0;
+}
 
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n);
