@@ -1,4 +1,8 @@
 /* String functions section */
+using namespace std;
+#include <vector>
+#include <string>
+#include <iostream>
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -103,11 +107,19 @@ std::vector<int> AddN(std::vector<int>, int n);
 std::vector<double> AddN(std::vector<double>, double n);
 
 // adds n to each element of the vector
-std::vector<std::string> AddN(std::vector<std::string>, std::string n);
+std::vector<std::string> AddN(std::vector<std::string> vect, std::string n){
+  for (int i =0; i<vect.size(); i++) {
+        vect[i] = vect[i] + n;
+    }
+}
 
 
 // subtracts n to each element of the vector
-std::vector<int> SubtractN(std::vector<int>, int n);
+std::vector<int> SubtractN(std::vector<int> vect, int n){
+  for (int i =0; i<vect.size(); i++) {
+        vect[i] = vect[i] - n;
+    }
+}
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
