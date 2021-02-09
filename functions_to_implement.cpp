@@ -138,6 +138,7 @@ std::vector<std::string> AddN(std::vector<std::string> vect, std::string n){
   for (int i =0; i<vect.size(); i++) {
         vect[i] = vect[i] + n;
     }
+    return vect;
 }
 
 
@@ -146,12 +147,8 @@ std::vector<int> SubtractN(std::vector<int> vect, int n){
   for (int i =0; i<vect.size(); i++) {
         vect[i] = vect[i] - n;
     }
+    return vect;
 }
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
-
-int main(int argc, char* argv[]){
-
-    return 0;
-}
