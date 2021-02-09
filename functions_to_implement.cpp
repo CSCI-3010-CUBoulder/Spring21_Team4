@@ -69,17 +69,17 @@ int NthFibonacci(int n) {
 
     for(int i = 1; i <= n; i++){
         if(i == 1) {
-            cout << val1 << ", ";
+            std::cout << val1 << ", ";
             continue;
         }
         if(i == 2) {
-            cout << val2 << ", ";
+            std::cout << val2 << ", ";
         }
         nextTerm = val1 + val2;
         val1 = val2;
         val2 = nextTerm;
 
-        cout << nextTerm << ", ";
+        std::cout << nextTerm << ", ";
     }
     return 0;
 }
