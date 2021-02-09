@@ -1,3 +1,7 @@
+#include <string>
+#include <vector>
+
+
 /* String functions section */
 
 // Splits a single string on separator into a vector of strings
@@ -33,10 +37,22 @@ std::vector<bool> OddMask(std::vector<int>);
 int Sum(std::vector<int> nums);
 
 // Multiplies all numbers in a vector together and returns the resulting value
-int Product(std::vector<int> nums);
+int Product(std::vector<int> nums){
+    int output = 0;
+    for(int i = 0; i < nums.size(); i++){
+        output += nums[i] * output;
+    }
+
+    return output;
+} // Tristan
 
 // Adds an integer n to each element of a given vector
-std::vector<int> VectorPlusN(std::vector<int> v, int n);
+std::vector<int> VectorPlusN(std::vector<int> v, int n){
+    for(int i = 0; i < v.size(); i++){
+        v[i] += n;
+    }
+    return v;
+} // Tristan
 
 // Multiples an integer n with each element of a given vector
 std::vector<int> VectorTimesN(std::vector<int> v, int n);
@@ -125,3 +141,9 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+
+int main(int argc, char* argv[]){
+
+    return 0;
+}
