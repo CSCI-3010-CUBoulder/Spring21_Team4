@@ -45,9 +45,9 @@ int Sum(std::vector<int> nums) {
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums){
-    int output = 0;
+    int output = 1;
     for(int i = 0; i < nums.size(); i++){
-        output += nums[i] * output;
+        output = nums[i] * output;
     }
 
     return output;
@@ -176,8 +176,7 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 std::vector<double> SubtractN(std::vector<double>, double n);
 
 
-int main(int argc, char* argv[]){
+// int main(int argc, char* argv[]){
 
-    return 0;
-}
-
+//     return 0;
+// }
