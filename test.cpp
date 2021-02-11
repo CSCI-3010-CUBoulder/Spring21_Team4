@@ -11,6 +11,4 @@ TEST_CASE("returns -1 if the number is negative and 1 if positive", "[Sign]") {
 
     REQUIRE(Sign(number) == 1);
     REQUIRE(Sign(number2) == -1);
-    
-    return 0;
 }
