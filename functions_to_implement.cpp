@@ -1,5 +1,8 @@
-#include <string>
+
+#include <iostream>
 #include <vector>
+#include <numeric>
+
 
 
 /* String functions section */
@@ -34,7 +37,11 @@ std::vector<bool> EvenMask(std::vector<int>);
 std::vector<bool> OddMask(std::vector<int>);
 
 // Sums all numbers in a vector and returns the resulting value
-int Sum(std::vector<int> nums);
+
+int Sum(std::vector<int> nums) {
+    return accumulate(nums.begin(), nums.end(),0);
+}
+
 
 // Multiplies all numbers in a vector together and returns the resulting value
 int Product(std::vector<int> nums){
@@ -65,12 +72,36 @@ std::vector<int> Multiples(int n, int m);
 std::vector<int> SquaresUntil(int n);
 
 // takes an int, n, and returns the nth value of the fibonacci sequence (1, 1, 2, 3, 5, 8, 13, ...)
-int NthFibonacci(int n);
+
+int NthFibonacci(int n) {
+    int n;
+    int val1 = 0;
+    int val2 = 1;
+    int nextTerm = 0;
+
+    for(int i = 1; i <= n; i++){
+        if(i == 1) {
+            std::cout << val1 << ", ";
+            continue;
+        }
+        if(i == 2) {
+            std::cout << val2 << ", ";
+        }
+        nextTerm = val1 + val2;
+        val1 = val2;
+        val2 = nextTerm;
+
+        std::cout << nextTerm << ", ";
+    }
+    return 0;
+}
+
 
 // takes an int, n, and returns the factorial of that int (n!)
 int Factorial(int n);
 
 // returns -1 if the number is negative and 1 if positive
+
 int Sign(int num){
     if(num > 0){
         return 1; 
@@ -117,6 +148,7 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
+
 double Sign(double num){
     if(num > 0.0){
         return 1.0;
@@ -125,6 +157,7 @@ double Sign(double num){
         return -1.0;
     }
 }
+
 
 
 // adds n to each element of the vector
